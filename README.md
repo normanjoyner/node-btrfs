@@ -15,6 +15,24 @@ ContainerShip Developers - developers@containership.io
 `npm install btrfs`
 
 ###Usage
+####create_subvolume
+```javascript
+var btrfs = require("btrfs");
+btrfs.create_subvolume("/mnt/btrfs/subvolume", function(err){
+    if(err)
+        throw err;
+});
+```
+
+####delete_subvolume
+```javascript
+var btrfs = require("btrfs");
+btrfs.delete_subvolume("/mnt/btrfs/subvolume", function(err){
+    if(err)
+        throw err;
+});
+```
+
 ####create_snapshot
 ```javascript
 var btrfs = require("btrfs");
