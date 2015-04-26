@@ -1,0 +1,11 @@
+{
+  "name": "btrfs",
+  "version": "0.1.0",
+  "dependencies": {
+    "nan": {
+      "version": "1.8.2",
+      "from": "nan@>=1.8.2 <2.0.0",
+      "resolved": "https://registry.npmjs.org/nan/-/nan-1.8.2.tgz"
+    }
+  }
+}
