@@ -100,16 +100,3 @@ int restore_snapshot()
     return 0; // went well
 }
 
-int main()
-{
-    struct create_snapshot_options options = { true };
-    char err[1024];
-    int result = create_snapshot("/mnt/btrfs/testvol", "/mnt/btrfs/test_snapshot", options, err);
-    if(result < 0) {
-        fprintf(stderr, "%s\n", err);
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
