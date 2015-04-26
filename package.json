@@ -4,11 +4,13 @@
   "description": "A btrfs library for nodejs applications",
   "main": "application.js",
   "dependencies": {
+    "lodash": "^3.7.0",
+    "mocha": "^2.2.4",
     "nan": "^1.8.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha",
     "install": "node-gyp rebuild"
   },
   "gypfile": true,
