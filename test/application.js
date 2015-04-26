@@ -1,6 +1,7 @@
 var _ = require("lodash");
 
 var tests = {
+    create_subvolume: require([__dirname, "create_subvolume"].join("/")),
     create_snapshot: require([__dirname, "create_snapshot"].join("/"))
 }
 

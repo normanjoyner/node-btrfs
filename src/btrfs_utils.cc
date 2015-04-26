@@ -37,11 +37,45 @@ int open_dir(const char *fname, DIR **dirstream)
 }
 
 /**
+ * Create a btfs subvolume.
+ */
+int create_subvolume(const char dst[BTRFS_VOL_NAME_MAX], char *err)
+{
+    int res;
+    int fd_dst;
+    struct btrfs_ioctl_vol_args_v2 args;
+    DIR *dir1;
+
+    char *dst_dup1 = strdup(dst);
+    char *dst_dup2 = strdup(dst);
+    char *dst_dir = dirname(dst_dup1);
+    char *subvol_name = basename(dst_dup2);
+
+    fd_dst = open_dir(dst_dir, &dir1);
+    if (fd_dst < 0) {
+        sprintf(err, "Cannot stat %s", dst_dir);
+        return -1;
+    }
+
+    // create the volume
+    strncpy(args.name, subvol_name, BTRFS_VOL_NAME_MAX);
+    res = ioctl(fd_dst, BTRFS_IOC_SUBVOL_CREATE_V2, &args);
+    if (res < 0) {
+        sprintf(err, "%s", strerror(errno));
+        return -1;
+    }
+
+    // cleanup
+    closedir(dir1);
+
+    return 0;
+}
+
+/**
  * Create a snapshot of a btrfs subvolume.
  */
-int create_snapshot(const char subvol[BTRFS_VOL_NAME_MAX], const char dst[PATH_MAX], struct create_snapshot_options options, char *err)
+int create_snapshot(const char subvol[BTRFS_VOL_NAME_MAX], const char dst[BTRFS_VOL_NAME_MAX], const struct create_snapshot_options options, char *err)
 {
-
     int res;
     int fd_dst;
     struct btrfs_ioctl_vol_args_v2 args;

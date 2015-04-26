@@ -1,6 +1,6 @@
 #include <nan.h>
 #include "btrfs_utils.hh"
-#include "snapshot.hh"
+#include "create_snapshot.hh"
 
 using v8::Function;
 using v8::Local;
