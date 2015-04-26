@@ -2,6 +2,7 @@
   "name": "btrfs",
   "version": "0.1.0",
   "description": "A btrfs library for nodejs applications",
+  "main": "application.js",
   "dependencies": {
     "nan": "^1.8.2"
   },
