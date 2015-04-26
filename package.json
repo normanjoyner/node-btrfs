@@ -1,8 +1,7 @@
 {
-  "name": "node-btrfs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "test.js",
+  "name": "btrfs",
+  "version": "0.1.0",
+  "description": "A btrfs library for nodejs applications",
   "dependencies": {
     "nan": "^1.8.2"
   },
@@ -11,7 +10,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp rebuild"
   },
-  "author": "",
-  "license": "ISC",
-  "gypfile": true
+  "gypfile": true,
+  "author": "ContainerShip Developers <developers@containership.io>",
+  "license": "GPL-3.0",
+  "keywords": [
+    "btrfs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/growbrosops/node-btrfs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/growbrosops/node-btrfs/issues"
+  },
+  "homepage": "https://github.com/growbrosops/node-btrfs"
 }
