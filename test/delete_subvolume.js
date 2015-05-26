@@ -6,9 +6,7 @@ module.exports = {
     start: function(){
         describe("delete_subvolume", function(){
             it("should delete a btrfs subvolume", function(fn){
-                btrfs.delete_subvolume("/mnt/btrfs/test_delete_subvolume", function(err){
-                    return fn(err);
-                });
+                btrfs.delete_subvolume("/mnt/btrfs/test_delete_subvolume", fn);
             });
         });
     }
