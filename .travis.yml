@@ -9,11 +9,11 @@ services:
   - docker
 
 before_install:
-  - apt-get install btrfs-tools -y
+  - sudo apt-get install btrfs-tools -y
   - mkdir /img
   - dd if=/dev/zero of=/img/btrfs.img bs=1024 count=100000
   - mkfs.btrfs /img/btrfs.img
-  - mount -o loop /img/btrfs.img /mnt/btrfs
+  - sudo mount -o loop /img/btrfs.img /mnt/btrfs
   - npm install
 
 script:
