@@ -14,7 +14,7 @@ before_install:
   - sudo mkdir /img
   - sudo dd if=/dev/zero of=/img/btrfs.img bs=1024 count=100000
   - sudo mkfs.btrfs /img/btrfs.img
-  - mkdir /mnt
+  - mkdir /mnt/btrfs
   - sudo mount -o loop /img/btrfs.img /mnt/btrfs
   - npm install
 
