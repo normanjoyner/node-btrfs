@@ -22,4 +22,5 @@ script:
   - sudo $(which npm) test
 
 notifications:
-  slack: "containership:$SLACK_TOKEN"
+  slack: containership:$SLACK_TOKEN
+  email: false
