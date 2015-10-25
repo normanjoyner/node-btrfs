@@ -3,6 +3,9 @@ btrfs
 
 ##About
 
+###Build Status
+[![Build Status](https://travis-ci.org/containership/node-btrfs.svg?branch=master)](https://travis-ci.org/containership/node-btrfs)
+
 ###Description
 A btrfs library for nodejs applications
 
