@@ -20,3 +20,6 @@ before_install:
 
 script:
   - sudo $(which npm) test
+
+notifications:
+  - containership:$SLACK_TOKEN
