@@ -11,9 +11,9 @@ services:
 before_install:
   - sudo apt-get update
   - sudo apt-get install btrfs-tools -y
-  - mkdir /img
-  - dd if=/dev/zero of=/img/btrfs.img bs=1024 count=100000
-  - mkfs.btrfs /img/btrfs.img
+  - sudo mkdir /img
+  - sudo dd if=/dev/zero of=/img/btrfs.img bs=1024 count=100000
+  - sudo mkfs.btrfs /img/btrfs.img
   - sudo mount -o loop /img/btrfs.img /mnt/btrfs
   - npm install
 
