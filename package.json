@@ -1,6 +1,6 @@
 {
   "name": "btrfs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A btrfs library for nodejs applications",
   "main": "application.js",
   "dependencies": {
