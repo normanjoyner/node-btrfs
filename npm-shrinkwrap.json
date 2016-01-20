@@ -1,6 +1,6 @@
 {
   "name": "btrfs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "dependencies": {
     "lodash": {
       "version": "3.7.0",
