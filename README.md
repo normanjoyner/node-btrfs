@@ -4,7 +4,7 @@ btrfs
 ##About
 
 ###Build Status
-[![Build Status](https://travis-ci.org/containership/node-btrfs.svg?branch=master)](https://travis-ci.org/containership/node-btrfs)
+[![Build Status](https://drone.containership.io/api/badges/containership/node-btrfs/status.svg)](https://drone.containership.io/containership/node-btrfs)
 
 ###Description
 A btrfs library for nodejs applications
