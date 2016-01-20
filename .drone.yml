@@ -9,5 +9,5 @@ build:
     - mkfs.btrfs /img/btrfs.img
     - mkdir /mnt/btrfs
     - mount -t btrfs -o loop /img/btrfs.img /mnt/btrfs
-    - npm install
+    - npm install --unsafe-perm
     - npm test
