@@ -1,5 +1,6 @@
 build:
   image: library/node:0.10.41
+  privileged: true
   commands:
     - apt-get update
     - apt-get install btrfs-tools -y
