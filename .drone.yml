@@ -20,8 +20,8 @@ notify:
 
 publish:
   npm:
-    username: $$NPM_USERNAME
-    password: $$NPM_PASSWORD
-    email: $$NPM_EMAIL
+    username: "$$NPM_USERNAME"
+    password: "$$NPM_PASSWORD"
+    email: "$$NPM_EMAIL"
     when:
       event: tag
